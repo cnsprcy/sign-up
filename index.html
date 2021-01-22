@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sign-in-form</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="sign-in">
+		<div class="col col-1">
+			<div class="text-box">
+				<h1>Create Account</h1>
+				<div class="social-bar">
+				</div>
+				<p>Already have an account? <span class="link link-1">Sign in!</span></p>
+				<input type="text" id="username" name="username" onfocus="this.value=''" placeholder="Username" required><br><br>
+				<input type="email" id="email" name="email"  onfocus="this.value=''" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" placeholder="Email address" required><br><br>
+			  	<input type="password" id="pwd" name="pwd" onfocus="this.value=''" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" required><br><br>
+				
+			  	<label class="container">
+					<input type="checkbox" id="checkbox" name="checkbox" required>
+					<span class="checkmark"></span>
+					<label for="checkbox" id="check-label">I agree to the <span class="link link-2">terms</span> and <span class="link link-3">privacy policy</span></label><br><br>
+				</label>
+				
+	 			<input type="submit" id="submit-btn" value="Sign Up">
+			</div>
+		</div>
+		<div class="col col-2">
+			<div class="pic-contain">
+				<img src="https://i.ibb.co/jWJ7Jyg/geo-pattern.png" alt="geo-pattern">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

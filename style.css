@@ -1,0 +1,198 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+/* CSS Document */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+body {
+	background-color: #BEC4DB;
+}
+
+.sign-in {
+	background-color: #FFF;
+	border-radius: 25px;
+	box-shadow: 0px 2px 8px 2px rgba(100,100,100,0.5);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin: 100px auto;
+	width: 650px;
+	height: 350px;
+	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+}
+
+.col {
+	width: 50%;
+	height: 350px;
+}
+
+.text-box {
+	margin: 35px 0;
+	width: 100%;
+	text-align: center;
+	line-height: 1.25em;
+}
+
+.link {
+	cursor: pointer;
+	color: #FFA538;
+}
+
+.link::after {
+  	position: absolute;
+  	content: "";
+  	height: 1px;
+  	background: #ff7000;
+  	transition: transform 0.5s;
+  	transform: scaleX(0);
+  	transform-origin: right;
+}
+
+.link-1::after {
+	margin-top: 20px;
+	margin-left: -51px;
+	width: 50px;
+}
+
+.link-2::after {
+	margin-top: 20px;
+	margin-left: -32px;
+	width: 31px;
+}
+
+.link-3::after {
+	margin-top: 20px;
+	margin-left: -78px;
+	width: 77px;
+}
+
+.link:hover {
+  	color: #BEC4DB;
+}
+
+.link:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+h1, p {
+	margin: 15px 0;
+}
+
+h1 {
+	color: #FFA538;
+}
+
+input {
+	cursor: pointer;
+}
+
+#username, #email, #pwd {
+	border: none;
+	border-radius: 5px;
+	background-color: #DDE5FF;
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.25), inset 0px 15px 10px -12px rgba(255,255,255,0.5);
+	padding: 5px 10px;
+	width: 75%;
+	height: 25px;
+}
+
+#username:hover, #email:hover, #pwd:hover {
+	background-color: #C4CCE3;
+}
+
+.container {
+  display: block;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#checkbox {
+	position: absolute;
+	opacity: 0;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	cursor: pointer;
+	background-color: #DDE5FF;
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.25), inset 0px 15px 10px -12px rgba(255,255,255,0.5);
+	position: absolute;
+	border-radius: 5px;
+	height: 20px;
+  	width: 20px;
+}
+
+.container:hover input ~ .checkmark {
+	background-color: #C4CCE3;
+}
+
+.container input:checked ~ .checkmark {
+	background-color: #FFA538;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+#checkbox:checked ~ .checkmark:after {
+	display: block;
+}
+
+.container .checkmark:after {
+  left: 6.5px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#check-label {
+	font-size: 0.8em;
+	margin-left: 25px;
+}
+
+#submit-btn {
+	background-color: #FFA538;
+	color: #FFF;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.25), inset 0px 15px 10px -12px rgba(255,255,255,0.5); 
+	width: 75%;
+	height: 25px;
+}
+
+#submit-btn:hover {
+	background-color: #FB8900;
+}
+
+/* Make placeholders dissapear on focus */
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } 
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+.pic-contain {
+	height: 350px;
+	overflow: hidden;
+}
+
+img {
+	height: 100%;
+}
